@@ -10,15 +10,15 @@ public class Test {
     {
         UniDataset.generateDataset();
         HighDataset.generateDataset();
-        Records[] d1 = UniDataset.dataset;
-        System.out.println(d1.length);
+        Records[] d1 = UniDataset.getData();
         for(int i=0;i<d1.length;i++)
         {
             System.out.println(d1[i].getData());
             System.out.println("index"+i);
         }
-        Records[] d2 = HighDataset.dataset1;
-        Records[] d3 = HighDataset.dataset2;
+        Pair pair = HighDataset.getData();
+        Records[] d2 = pair.dataset1;
+        Records[] d3 = pair.dataset2;
         for(int i=0;i<d1.length;i++)
         {
             if(i>=70000)
