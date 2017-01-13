@@ -6,16 +6,27 @@ package Assignments.Assignment1;
 public class Bucket {
     private Records[] records;
     private Integer empty;
-    private String next;
+    public String next;
     public Bucket()
     {
      records = new Records[RecordSize.size];
      empty = RecordSize.size;
      next="";
     }
+    public Boolean hasSpace()
+    {
+        System.out.println(empty);
+        if(this.empty!=0)
+        {
+            return true;
+        }
+        else
+            return false;
+    }
+
     public void addRecords(Records record)
     {
-        if(this.empty!=0)
+        if(this.hasSpace())
         {
             records[RecordSize.size-this.empty] = record;
             this.empty--;
@@ -35,6 +46,11 @@ public class Bucket {
             records[i] = null;
         }
     }
+    public Records[] getRecords()
+    {
+        return this.records;
+    }
+
 
 
 
