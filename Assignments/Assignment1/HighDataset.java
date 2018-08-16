@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.util.Random;
 
 /**
- * Created by Rajeev Nagarwal on 1/11/2017.
+ * Created by kushagra on 1/11/2017.
  */
 public class HighDataset {
     public static Records[] dataset1;
